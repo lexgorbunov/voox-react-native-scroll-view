@@ -2,11 +2,14 @@ import UIKit
 import React
 import IQKeyboardManagerSwift
 
-@objc(ScrollViewManager)
+@objc(KScrollViewManager)
 class ScrollViewManager: RCTViewManager {
+    override class func requiresMainQueueSetup() -> Bool {
+        true
+    }
     
-    override func view() -> (ScrollViewView) {
-        return ScrollViewView(bridge: bridge)
+    override func view() -> ScrollView {
+        return ScrollView(bridge: bridge)
     }
     
     @objc
@@ -30,7 +33,7 @@ class ScrollViewManager: RCTViewManager {
     @objc
     private func scrollToViewCommand(_ viewTag: NSNumber, nativeId: String) {
         bridge.uiManager.addUIBlock { (manager, viewRegistry) in
-            if let scrollView = viewRegistry?[viewTag] as? ScrollViewView,
+            if let scrollView = viewRegistry?[viewTag] as? ScrollView,
                let rootView = scrollView.subviews.first(where: { $0.nativeID == "nativeScrollViewWrapper" }),
                let scrollToView = rootView.subviews.first(where: { $0.nativeID == nativeId }) {
                 scrollView.scrollToView(view: scrollToView, animated: true)
@@ -39,7 +42,7 @@ class ScrollViewManager: RCTViewManager {
     }
 }
 
-class ScrollViewView : UIScrollView {
+class ScrollView : UIScrollView {
     private weak var bridge: RCTBridge?
     
     init(bridge: RCTBridge) {

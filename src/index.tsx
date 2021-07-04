@@ -4,7 +4,7 @@ import { createRef, PureComponent } from 'react';
 import type { ScrollViewProps } from './ScrollViewNative';
 import {
   getViewManagerConfig,
-  ScrollViewViewManager,
+  KScrollViewViewManager,
 } from './ScrollViewNative';
 
 export class NativeScrollView extends PureComponent<ScrollViewProps> {
@@ -50,9 +50,9 @@ export class NativeScrollView extends PureComponent<ScrollViewProps> {
 
   render() {
     return (
-      <ScrollViewViewManager ref={this.scrollView} {...this.props}>
+      <KScrollViewViewManager ref={this.scrollView} {...this.props}>
         <View nativeID={'nativeScrollViewWrapper'}>{this.props.children}</View>
-      </ScrollViewViewManager>
+      </KScrollViewViewManager>
     );
   }
 }

@@ -25,7 +25,7 @@ class ScrollViewManager(private val reactContext: ReactContext) : ViewGroupManag
 
   private var previousSoftInputMode: Int? = null
 
-  override fun getName() = "ScrollView"
+  override fun getName() = "KScrollView"
 
   override fun createViewInstance(reactContext: ThemedReactContext): NativeScrollView {
     return NativeScrollView(reactContext, WeakReference(reactContext.currentActivity!!))
