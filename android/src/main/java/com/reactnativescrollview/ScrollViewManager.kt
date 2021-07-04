@@ -23,6 +23,8 @@ class ScrollViewManager(private val reactContext: ReactContext) : ViewGroupManag
     3 to "scrollToViewCommand"
   )
 
+  private var previousSoftInputMode: Int? = null
+
   override fun getName() = "ScrollView"
 
   override fun createViewInstance(reactContext: ThemedReactContext): NativeScrollView {
@@ -43,10 +45,13 @@ class ScrollViewManager(private val reactContext: ReactContext) : ViewGroupManag
     commandId ?: return
     when(commandId) {
       "activateKeyboardCommand" -> {
+        previousSoftInputMode = reactContext.currentActivity?.window?.attributes?.softInputMode
         reactContext.currentActivity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
       }
       "deactivateKeyboardCommand" -> {
-        reactContext.currentActivity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
+        previousSoftInputMode?.let {
+          reactContext.currentActivity?.window?.setSoftInputMode(it)
+        }
       }
       "scrollToViewCommand" -> {
         println("")
