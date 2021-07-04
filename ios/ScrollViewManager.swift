@@ -33,10 +33,11 @@ class ScrollViewManager: RCTViewManager {
     @objc
     private func scrollToViewCommand(_ viewTag: NSNumber, nativeId: String) {
         bridge.uiManager.addUIBlock { (manager, viewRegistry) in
-            if let scrollView = viewRegistry?[viewTag] as? ScrollView,
-               let rootView = scrollView.subviews.first(where: { $0.nativeID == "nativeScrollViewWrapper" }),
-               let scrollToView = rootView.subviews.first(where: { $0.nativeID == nativeId }) {
-                scrollView.scrollToView(view: scrollToView, animated: true)
+            if let scrollView = viewRegistry?[viewTag] as? ScrollView {
+                let scrollToView = scrollView.find(nativeId)
+                if scrollToView == nil { return }
+                
+                scrollView.scrollToView(view: scrollToView!, animated: true)
             }
         }
     }
@@ -81,5 +82,21 @@ extension UIScrollView {
             // Scroll to a rectangle starting at the Y of your subview, with a height of the scrollview
             self.scrollRectToVisible(CGRect(x:0, y:childStartPoint.y,width: 1,height: self.frame.height), animated: animated)
         }
+    }
+}
+
+extension UIView {
+    func find(_ nativeID: String) -> UIView? {
+        if self.accessibilityLabel == nativeID || self.nativeID == nativeID {
+            return self
+        }
+        
+        for subview in subviews {
+            if let v = subview.find(nativeID) {
+                return v
+            }
+        }
+        
+        return nil
     }
 }

@@ -18,7 +18,9 @@ class NativeScrollView(context: Context?, private val currentActivity: WeakRefer
 
   fun scrollToView(view: View) {
     post {
-      smoothScrollTo(view.left, view.bottom)
+      val array = IntArray(2)
+      view.getLocationOnScreen(array)
+      smoothScrollTo(array[0], array[1])
     }
   }
 }

@@ -10,11 +10,14 @@ export default function App() {
   useEffect(() => {
     s.current?.activateKeyboard();
     // console.log(
+
     //   s.current?.setNativeProps({
     //     scrollToViewId: 'someTestViewId',
     //   })
     // );
-    s.current?.scrollToView('someTestViewId');
+    setTimeout(() => {
+      s.current?.scrollToView('someTestViewId');
+    }, 1000);
   }, []);
 
   return (
@@ -255,10 +258,11 @@ export default function App() {
           sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
           porro! Maiores!
         </Text>
-        <View
-          nativeID={'someTestViewId'}
-          style={{ height: 100, width: '100%', backgroundColor: 'yellow' }}
-        />
+        <View style={{ height: 100, width: '100%', backgroundColor: 'yellow' }}>
+          <View>
+            <View accessibilityLabel={'someTestViewId'} />
+          </View>
+        </View>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
           animi architecto autem enim eveniet ipsum, iste laudantium quia, quod

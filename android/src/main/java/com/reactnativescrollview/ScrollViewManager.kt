@@ -1,7 +1,9 @@
 package com.reactnativescrollview
 
+import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import com.facebook.react.R
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.uimanager.ThemedReactContext
@@ -56,7 +58,8 @@ class ScrollViewManager(private val reactContext: ReactContext) : ViewGroupManag
       "scrollToViewCommand" -> {
         println("")
         val r = (root.getChildAt(0) as? ViewGroup) ?: return
-        val v = ReactFindViewUtil.findView(r, args.getString(0)) ?: return
+        val nativeId = args.getString(0) ?: return
+        val v = r.findView(nativeId) ?: return
         root.scrollToView(v)
       }
     }
@@ -65,4 +68,30 @@ class ScrollViewManager(private val reactContext: ReactContext) : ViewGroupManag
   override fun getCommandsMap(): MutableMap<String, Int> {
     return commands
   }
+}
+
+
+/**
+ * Finds a view that is tagged with {@param nativeId} as its nativeID prop under the {@param root}
+ * view hierarchy. Returns the view if found, null otherwise.
+ *
+ * @param root root of the view hierarchy from which to find the view
+ */
+fun View.findView(nativeId: String): View? {
+  if (contentDescription == nativeId) return this
+  val tag = getNativeId(this)
+  if (tag != null && tag == nativeId) return this
+  if (this is ViewGroup) {
+    val viewGroup = this
+    for (i in 0 until viewGroup.childCount) {
+      val view = viewGroup.getChildAt(i).findView(nativeId)
+      if (view != null) return view
+    }
+  }
+  return null
+}
+
+private fun getNativeId(view: View): String? {
+  val tag = view.getTag(R.id.view_tag_native_id)
+  return if (tag is String) tag else null
 }
