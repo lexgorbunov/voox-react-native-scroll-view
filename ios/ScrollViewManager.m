@@ -2,7 +2,7 @@
 #import <React/RCTViewManager.h>
 #import <React/RCTUIManager.h>
 
-@interface RCT_EXTERN_MODULE(ScrollViewViewManager, RCTViewManager)
+@interface RCT_EXTERN_MODULE(ScrollViewManager, RCTViewManager)
 
 RCT_EXPORT_VIEW_PROPERTY(dismissKeyboardOnScroll, BOOL)
 RCT_EXTERN_METHOD(activateKeyboardCommand:(nonnull NSNumber *)viewTag)

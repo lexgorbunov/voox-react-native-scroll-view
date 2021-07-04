@@ -14,7 +14,7 @@ export default function App() {
     //     scrollToViewId: 'someTestViewId',
     //   })
     // );
-    //s.current?.scrollToView('someTestViewId');
+    s.current?.scrollToView('someTestViewId');
   }, []);
 
   return (
@@ -243,6 +243,12 @@ export default function App() {
           sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
           porro! Maiores!
         </Text>
+        <TextInput
+          style={{ width: 300, backgroundColor: 'blue' }}
+          multiline
+          returnKeyType={'next'}
+        />
+
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
           animi architecto autem enim eveniet ipsum, iste laudantium quia, quod

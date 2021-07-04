@@ -5,7 +5,7 @@ export type ScrollViewProps = {
   dismissKeyboardOnScroll?: boolean;
 };
 
-const VIEW_MANAGER_NAME = 'ScrollViewView';
+const VIEW_MANAGER_NAME = 'ScrollView';
 export const ScrollViewViewManager =
   requireNativeComponent<ScrollViewProps>(VIEW_MANAGER_NAME);
 

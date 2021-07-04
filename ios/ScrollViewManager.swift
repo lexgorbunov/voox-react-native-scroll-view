@@ -2,8 +2,8 @@ import UIKit
 import React
 import IQKeyboardManagerSwift
 
-@objc(ScrollViewViewManager)
-class ScrollViewViewManager: RCTViewManager {
+@objc(ScrollViewManager)
+class ScrollViewManager: RCTViewManager {
     
     override func view() -> (ScrollViewView) {
         return ScrollViewView(bridge: bridge)
