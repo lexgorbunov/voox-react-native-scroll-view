@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { NativeScrollView } from 'react-native-scroll-view';
 
 export default function App() {
   const s = useRef<NativeScrollView>(null);
+
+  const [items, setItems] = useState([1, 2, 3, 4, 5]);
 
   useEffect(() => {
     s.current?.activateKeyboard();
@@ -15,267 +17,27 @@ export default function App() {
     //     scrollToViewId: 'someTestViewId',
     //   })
     // );
-    setTimeout(() => {
-      s.current?.scrollToView('someTestViewId');
-    }, 1000);
+    // setTimeout(() => {
+    //   s.current?.scrollToView('someTestViewId');
+    // }, 1000);
   }, []);
 
   return (
     <View style={styles.container}>
       <NativeScrollView dismissKeyboardOnScroll style={styles.box} ref={s}>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <TextInput style={{ width: '100%', maxHeight: 200 }} />
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <TextInput
-          style={{ width: 300, backgroundColor: 'blue' }}
-          multiline
-          returnKeyType={'next'}
-        />
-
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <View style={{ height: 100, width: '100%', backgroundColor: 'yellow' }}>
-          <View>
-            <View accessibilityLabel={'someTestViewId'} />
-          </View>
-        </View>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          animi architecto autem enim eveniet ipsum, iste laudantium quia, quod
-          sed tempore totam. Incidunt, molestias, velit. Beatae enim incidunt
-          porro! Maiores!
-        </Text>
-        <Text>last</Text>
+        {items.map((i) => {
+          return (
+            <TouchableOpacity
+              style={{ height: 50 }}
+              key={i}
+              onPress={() => {
+                setItems(items.filter((im) => im !== i));
+              }}
+            >
+              <Text>Items: {i}</Text>
+            </TouchableOpacity>
+          );
+        })}
       </NativeScrollView>
     </View>
   );
@@ -288,7 +50,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    flex: 1,
+    width: '100%',
+    height: '100%',
+    paddingTop: 100,
     backgroundColor: 'red',
   },
 });
