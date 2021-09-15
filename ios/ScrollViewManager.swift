@@ -9,7 +9,9 @@ class ScrollViewManager: RCTViewManager {
     }
     
     override func view() -> ScrollView {
-        return ScrollView(bridge: bridge)
+        let scrollView = ScrollView(bridge: bridge)
+        scrollView.showsVerticalScrollIndicator = false
+        return scrollView
     }
     
     @objc
