@@ -186,7 +186,7 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - React-jsinspector (0.63.4)
-  - react-native-scroll-view (0.1.0):
+  - react-native-scroll-view (0.2.1):
     - IQKeyboardManagerSwift
     - React-Core
   - React-RCTActionSheet (0.63.4):
@@ -361,7 +361,7 @@ SPEC CHECKSUMS:
   React-jsi: a0418934cf48f25b485631deb27c64dc40fb4c31
   React-jsiexecutor: 93bd528844ad21dc07aab1c67cb10abae6df6949
   React-jsinspector: 58aef7155bc9a9683f5b60b35eccea8722a4f53a
-  react-native-scroll-view: d0bc92791633921b6fd4b8b6e03e212827ef37bf
+  react-native-scroll-view: 1093e1505c6367a18d01a7c059d26489b152c499
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
   React-RCTBlob: a97d378b527740cc667e03ebfa183a75231ab0f0
@@ -376,4 +376,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 27152417fc7a81466542cd56c33905dfd1c3d7eb
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
