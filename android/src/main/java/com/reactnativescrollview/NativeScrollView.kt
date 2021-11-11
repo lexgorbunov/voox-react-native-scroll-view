@@ -6,6 +6,7 @@ import android.view.View
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.views.scroll.ReactScrollView
 import java.lang.ref.WeakReference
+import java.util.*
 
 class NativeScrollView(context: Context?, private val currentActivity: WeakReference<Activity>) : ReactScrollView(context as ReactContext?) {
 
@@ -18,9 +19,7 @@ class NativeScrollView(context: Context?, private val currentActivity: WeakRefer
 
   fun scrollToView(view: View) {
     post {
-      val array = IntArray(2)
-      view.getLocationOnScreen(array)
-      smoothScrollTo(array[0], array[1])
+      smoothScrollTo(0, view.top)
     }
   }
 }

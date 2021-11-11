@@ -10,34 +10,195 @@ export default function App() {
   const [items, setItems] = useState([1, 2, 3, 4, 5]);
 
   useEffect(() => {
-    s.current?.activateKeyboard();
+    //s.current?.activateKeyboard();
     // console.log(
 
     //   s.current?.setNativeProps({
     //     scrollToViewId: 'someTestViewId',
     //   })
     // );
-    // setTimeout(() => {
-    //   s.current?.scrollToView('someTestViewId');
-    // }, 1000);
+    setTimeout(() => {
+      s.current?.scrollToView('someTestViewId');
+    }, 1000);
   }, []);
 
   return (
     <View style={styles.container}>
       <NativeScrollView dismissKeyboardOnScroll style={styles.box} ref={s}>
-        {items.map((i) => {
-          return (
-            <TouchableOpacity
-              style={{ height: 50 }}
-              key={i}
-              onPress={() => {
-                setItems(items.filter((im) => im !== i));
-              }}
-            >
-              <Text>Items: {i}</Text>
-            </TouchableOpacity>
-          );
-        })}
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 350, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 250, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 150, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text nativeID={'someTestViewId'} style={{height: 50, width: '100%', backgroundColor: 'yellow', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
+        <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
       </NativeScrollView>
     </View>
   );
