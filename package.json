@@ -1,6 +1,6 @@
 {
   "name": "react-native-scroll-view",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "scroll view for React Native",
   "main": "src/index",
   "module": "src/index",

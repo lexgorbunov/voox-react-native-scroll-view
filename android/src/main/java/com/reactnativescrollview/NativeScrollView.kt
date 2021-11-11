@@ -2,6 +2,7 @@ package com.reactnativescrollview
 
 import android.app.Activity
 import android.content.Context
+import android.graphics.Rect
 import android.view.View
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.views.scroll.ReactScrollView
@@ -19,7 +20,13 @@ class NativeScrollView(context: Context?, private val currentActivity: WeakRefer
 
   fun scrollToView(view: View) {
     post {
-      smoothScrollTo(0, view.top)
+      val offsetViewBounds = Rect()
+      view.getDrawingRect(offsetViewBounds)
+      this.offsetDescendantRectToMyCoords(view, offsetViewBounds)
+
+      val relativeTop: Int = offsetViewBounds.top
+      val relativeLeft: Int = offsetViewBounds.left
+      smoothScrollTo(relativeLeft, relativeTop)
     }
   }
 }

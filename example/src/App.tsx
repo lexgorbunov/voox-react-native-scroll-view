@@ -194,7 +194,14 @@ export default function App() {
         <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
         <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
         <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
-        <Text nativeID={'someTestViewId'} style={{height: 50, width: '100%', backgroundColor: 'yellow', marginBottom: 10}}>Items</Text>
+        <View>
+          <View>
+
+            <View>
+              <Text nativeID={'someTestViewId'} style={{height: 50, width: '100%', backgroundColor: 'yellow', marginBottom: 10}}>Items</Text>
+            </View>
+          </View>
+        </View>
         <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
         <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
         <Text style={{height: 50, width: '100%', backgroundColor: 'red', marginBottom: 10}}>Items</Text>
